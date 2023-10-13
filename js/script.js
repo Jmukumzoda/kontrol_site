@@ -494,7 +494,7 @@ function reload(arr) {
             promo__descr.innerHTML = elem.Awards
             promo__content.innerHTML = `IMDb: ${elem.imdbRating}`
             promo__content2.innerHTML = `IMDb: ${elem.Metascore}`
-            promo__bg.style.backgroundImage = `url("${elem.Poster} no-repeat ")`
+            promo__bg.style.backgroundImage = `url("${elem.Poster}")`
         }
         delet.onclick = () => {
             ul1.remove()
