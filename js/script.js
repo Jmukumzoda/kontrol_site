@@ -483,12 +483,12 @@ function reload(arr) {
         ul1.classList.add('promo__interactive-item')
         delet.classList.add('delete')
 
-        ul1.innerHTML = elem.Title
+        ul1.innerHTML = `${ + 1}. ${elem.Title}`
 
         ul1.append(delet)
         promo.append(ul1)
-
         ul1.onclick = () => {
+
             promo_genre.innerHTML = elem.Genre
             promo_title.innerHTML = elem.Title
             promo__descr.innerHTML = elem.Awards
