@@ -1,5 +1,5 @@
 import { movies } from "./db.js"
-import { setMovie} from "./script.js"
+import { setMovie } from "./script.js"
 let promo = document.querySelector('.promo__interactive-list')
 let promo__bg = document.querySelector('.promo__bg')
 let promo_genre = document.querySelector('.promo__genre')
@@ -65,17 +65,16 @@ export function reload_genres(arr) {
         li.onclick = () => {
             gen.childNodes.forEach(elem => elem.firstChild.classList.remove('promo__menu-item_active'))
             li.firstChild.classList.add('promo__menu-item_active')
-            let filt1 = movies.filter(el =>{
-                let gender_arr = el.Genre.toLowerCase()
-                if(item.toLowerCase() === gender_arr) {
+            let filt_movies = movies.filter(el => {
+                let gender_arr = el.Genre
+                if (item === gender_arr) {
                     return el
-                } else if(item.toLowerCase() === 'all') {
+                } else if (item === 'All') {
                     reload(movies)
                 }
             })
-            if (filt1.length > 0) {
-                reload(filt1)
-            }
+            reload(filt_movies)
+            console.log(filt_movies);
         }
 
     }
