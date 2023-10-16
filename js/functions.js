@@ -66,8 +66,7 @@ export function reload_genres(arr) {
             gen.childNodes.forEach(elem => elem.firstChild.classList.remove('promo__menu-item_active'))
             li.firstChild.classList.add('promo__menu-item_active')
             let filt_movies = movies.filter(el => {
-                let gender_arr = el.Genre
-                if (item === gender_arr) {
+                if (item === el.Genre) {
                     return el
                 } else if (item === 'All') {
                     reload(movies)
